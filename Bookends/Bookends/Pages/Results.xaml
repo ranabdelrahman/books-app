@@ -1,0 +1,39 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             mc:Ignorable="d"
+             x:Class="Bookends.Results">
+    <ContentPage.Content>
+        <StackLayout x:Name="layout"  BackgroundColor="#edf7fc">
+            <Label x:Name="res" Text="Results" TextColor="DarkCyan" HorizontalOptions="CenterAndExpand" FontSize="30"/>
+            <ListView x:Name="lv" Margin="10"> 
+                <ListView.ItemTemplate> 
+                    <DataTemplate>
+                        <ViewCell>
+                            <Frame BackgroundColor="#f7f9fa" Padding="10" Margin="5">
+                                <Grid x:Name="grid"> 
+                                <Grid.ColumnDefinitions>
+                                    <ColumnDefinition Width="*"/>
+                                    <ColumnDefinition Width="8*"/>
+                                    <ColumnDefinition Width="2*"/>
+                                </Grid.ColumnDefinitions>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="Auto"/>
+                                        <RowDefinition Height="Auto"/>
+                                    </Grid.RowDefinitions>
+                                <Image Grid.Column="0" Grid.Row="0" Grid.RowSpan="4" HorizontalOptions="Start" VerticalOptions="Start" Source="{x:Binding imageLinks.thumbnail}"/>
+                                <Label x:Name="tl" Grid.Column="1" Grid.Row="0" Text="{Binding title}" HorizontalOptions="Start" FontSize="20"/>
+                                <Label x:Name="author" TextColor="Gray" Grid.Column="1" Grid.Row="1" Text="{Binding authors[0]}" HorizontalOptions="Start" FontSize="15"/>
+                                <Button Grid.Column="2" Grid.Row="0" x:Name="currentButton" Text="Want to read" HorizontalOptions="Start" TextColor="White" BackgroundColor="DarkCyan" Clicked="Button_Clicked"/>
+                                <Button Grid.Column="2" Grid.Row="1" x:Name="moreButton" Text="More info" HorizontalOptions="StartAndExpand" TextColor="White" BackgroundColor="DarkCyan" Clicked="moreButton_Clicked"/>
+                                </Grid>
+                            </Frame>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,66 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<!--<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Bookends.ToReadPage">
+    <ContentPage.Content>
+        <StackLayout x:Name="layout" Spacing="15" >
+            <Label Text="My List" TextColor="DarkGreen" FontSize="30" HorizontalOptions="CenterAndExpand" />
+            <ListView x:Name="bookList" Margin="10" >
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Frame BorderColor="DarkGreen">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="3*"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Image Grid.Column="0" Grid.Row="0" Grid.RowSpan="4" HorizontalOptions="Start" VerticalOptions="Start" Source="{x:Binding imageLinks.thumbnail}"/>
+                                    <Label x:Name="title" Grid.Column="0" Grid.Row="0" Text="{x:Binding title}" HorizontalOptions="Start" FontSize="15"/>
+                                    <Button Text="Remove" Clicked="Button_Clicked" TextColor="Beige" BackgroundColor="DarkGreen" Grid.Column="1" Grid.Row="0" HorizontalOptions="End"/>
+                                </Grid>
+                            </Frame>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>-->
+
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Bookends.ToReadPage"
+             >
+    <ContentPage.Content>
+        <StackLayout x:Name="layout" Spacing="15" BackgroundColor="#edf7fc">
+            <Label Text="My List" TextColor="DarkCyan" FontSize="30" HorizontalOptions="CenterAndExpand" />
+            <ListView x:Name="bookList" Margin="10">
+                <ListView.ItemTemplate>
+                    <DataTemplate>
+                        <ViewCell>
+                            <Frame BackgroundColor="#f7f9fa" Padding="10" Margin="5">
+                                <Grid>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="3*"/>
+                                        <ColumnDefinition Width="*"/>
+                                    </Grid.ColumnDefinitions> 
+                                    <!--<Image Grid.Column="0" Grid.Row="0" Grid.RowSpan="4" HorizontalOptions="Start" VerticalOptions="Start" Source="{x:Binding imageLinks.thumbnail}"/>-->
+                                    <Label x:Name="title" Grid.Column="0" Grid.Row="0" Text="{x:Binding title}" HorizontalOptions="Start" FontSize="15"/>
+                                    <Button Text="Remove" Clicked="Button_Clicked" TextColor="White" BackgroundColor="DarkCyan" Grid.Column="1" Grid.Row="0" HorizontalOptions="End"/>
+                                </Grid>
+                            </Frame>
+                        </ViewCell>
+                    </DataTemplate>
+                </ListView.ItemTemplate>
+            </ListView>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
+
+    
+
+
+    
+
+

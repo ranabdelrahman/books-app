@@ -1,0 +1,29 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Bookends.BooksPage">
+    <ContentPage.Content>
+        <StackLayout>
+            
+            <StackLayout HorizontalOptions="CenterAndExpand" Spacing="20" Padding="60">
+                <Label Text="BOOKENDS" FontSize="40" FontAttributes="Bold" HorizontalOptions="Center" TextColor="DarkCyan"/>
+                <Grid>
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                        <ColumnDefinition Width="*"/>
+                    </Grid.ColumnDefinitions>
+                    <Label Text="Search book title" Grid.Row="0" Grid.Column="1" Grid.ColumnSpan="2" TextColor="Gray" HorizontalOptions="StartAndExpand" VerticalOptions="EndAndExpand"/>
+                    <Entry x:Name="entry" Grid.Row="1" Grid.Column="1" Grid.ColumnSpan="3"/>
+                    <Button x:Name="searchButton" Text="Search" Grid.Row="1" Grid.Column="4" BackgroundColor="DarkCyan" Clicked="searchButton_Clicked"/>
+                </Grid>
+               
+            </StackLayout>
+         </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
+
+
