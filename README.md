@@ -1,0 +1,1 @@
+This is a cross-platform Xamarin mobile application that allows users to search for and track books (using the Google Books API), as well as add them to a favorites list. Implemented a responsive layout, audio functionality, and utilized a database to store book data
